@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validator | Raja Ehsan Project 2</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="main">
+      <div class="form">
+        <h1 class="header">Contact Us</h1>
+        <form id="myForm" onsubmit="return validator()">
+          <p class="form-text">Your Name</p>
+          <input
+            type="text"
+            name="fname"
+            id="fname"
+            placeholder="First Name"
+            onblur="inputFocus1(this)"
+          />
+          <input
+            type="text"
+            name="lname"
+            id="lname"
+            placeholder="Last Name"
+            onblur="inputFocus2(this)"
+          />
+          <div class="validations">
+            <div class="validation-text first">This Field cannot be empty</div>
+            <div class="validation-text second">This Field cannot be empty</div>
+          </div>
+          <p class="form-text">Email Address</p>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            onblur="inputFocus3(this)"
+          />
+          <div class="validation-text third">This Field cannot be empty</div>
+          <p class="form-text">Password</p>
+
+          <div class="password-input">
+            <div class="first-password-field">
+              <input
+                type="text"
+                name="password"
+                id="password"
+                placeholder=" Enter Password"
+                readonly
+                onblur="inputFocus4()"
+              />
+              <i class="ri-question-fill icon" onclick="passwordGenerate()"></i>
+            </div>
+            <input
+              type="text"
+              name="password"
+              id="password-again"
+              placeholder="Re-enter password"
+              onblur="inputFocus5(this)"
+            />
+          </div>
+          <div class="validations">
+            <div class="validation-text fourth">This Field cannot be empty</div>
+            <div class="validation-text fifth">This Field cannot be empty</div>
+          </div>
+          <div id="submit-btn">
+            <button type="submit" class="submit-btn" onclick="checkValidate()">
+              Submit
+            </button>
+          </div>
+          <h2 class="submission-text">Form has been Submitted</h2>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
